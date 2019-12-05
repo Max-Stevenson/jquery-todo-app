@@ -23,6 +23,12 @@ h1 {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
 }
 
 /*# sourceMappingURL=input.css.map */
