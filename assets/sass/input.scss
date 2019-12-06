@@ -1,18 +1,6 @@
 $background-gray: #f7f7f7;
 $background-blue: #2980b9;
-
-#container {
-  width: 360px;
-  margin: 100px auto;
-  border: 2px solid gray;
-  background: $background-gray;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-}
-
-.completed {
-  color: gray;
-  text-decoration: line-through;
-}
+$background-red: #e74c3c;
 
 h1 {
   background: $background-blue;
@@ -22,6 +10,13 @@ h1 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: normal;
+}
+
+body {
+  font-family: Roboto;
+  background: #00416A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 ul {
@@ -37,18 +32,57 @@ li {
   color: #666;
 }
 
+span {
+  background: $background-red;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0px;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
 input {
   font-size: 18px;
   background: $background-gray;
   width: 100%;
   padding: 13px 13px 13px 20px;
   box-sizing: border-box;
+  color: $background-blue;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+#container {
+  width: 360px;
+  margin: 100px auto;
+  border: 2px solid gray;
+  background: $background-gray;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
+
+
+input:focus {
+  background: #fff;
+  outline: none;
+  border: solid 3px $background-blue;
 }
 
 li:nth-child(2) {
   background: $background-gray;
 }
 
-body {
-  font-family: Roboto;
+.fa-plus {
+  float: right;
+}
+
+li:hover span {
+  width: 40px;
+  opacity: 1.0;
 }
